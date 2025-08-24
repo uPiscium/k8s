@@ -19,5 +19,13 @@ in
         ./master/host.nix
       ];
     };
+    node = mkNixosSystem {
+      system = "x86_64-linux";
+      hostname = "node";
+      username = "upiscium";
+      modules = [
+        ./node/host.nix
+      ];
+    };
   };
 }
