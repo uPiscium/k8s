@@ -8,9 +8,8 @@
   imports =
     [
       # Include the results of the hardware scan.
-      ./hwsetting
+      ../common
       ./networking
-      ./swsetting
       ./virtualize
       ./hardware.nix
     ]
