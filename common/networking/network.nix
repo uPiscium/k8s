@@ -1,7 +1,4 @@
 { hostname, ... }:
-let
-  IPAddress = "192.168.11.145";
-in
 {
   services.openssh.enable = true;
   programs.ssh.startAgent = true;
@@ -22,15 +19,5 @@ in
     openFirewall = true;
   };
 
-  networking.useDHCP = false;
-  networking.interfaces.ens18 = {
-    useDHCP = false;
-    ipv4.addresses = [
-      {
-        address = IPAddress;
-        prefixLength = 24;
-      }
-    ];
-  };
   networking.defaultGateway = "192.168.11.1";
 }

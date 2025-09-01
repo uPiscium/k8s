@@ -1,7 +1,7 @@
-{ pkgs, ... }:
+{ pkgs, hostname, ... }:
 let
-  kubeMasterIP = "10.8.0.1";
-  kubeMasterHostname = "master";
+  kubeMasterIP = "10.100.200.1";
+  kubeMasterHostname = hostname;
   kubeMasterAPIServerPort = 6443;
 in
 {
@@ -16,6 +16,7 @@ in
   ];
 
   services.kubernetes = {
+    openFirewall = true;
     roles = [ "master" "node" ];
     masterAddress = kubeMasterHostname;
     apiserverAddress = "https://${kubeMasterHostname}:${toString kubeMasterAPIServerPort}";

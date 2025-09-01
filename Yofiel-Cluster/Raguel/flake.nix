@@ -11,7 +11,7 @@
     {
       nixosConfigurations.node = mkNixosSystem {
         system = "x86_64-linux";
-        hostname = "node";
+        hostname = "Raguel";
         username = "upiscium";
         modules = [
           ./host.nix

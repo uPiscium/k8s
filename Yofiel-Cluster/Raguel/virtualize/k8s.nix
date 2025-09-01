@@ -1,7 +1,7 @@
 { pkgs, ... }:
 let
-  kubeMasterIP = "10.8.0.1";
-  kubeMasterHostname = "master";
+  kubeMasterIP = "10.100.200.2";
+  kubeMasterHostname = "Yofiel";
   kubeMasterAPIServerPort = 6443;
 in
 {

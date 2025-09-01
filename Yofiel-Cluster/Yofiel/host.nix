@@ -8,7 +8,7 @@
   imports =
     [
       # Include the results of the hardware scan.
-      ../common
+      ../../common
       ./networking
       ./virtualize
       ./hardware.nix

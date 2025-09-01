@@ -11,7 +11,7 @@
     {
       nixosConfigurations.master = mkNixosSystem {
         system = "x86_64-linux";
-        hostname = "master";
+        hostname = "Yofiel";
         username = "upiscium";
         modules = [
           ./host.nix
