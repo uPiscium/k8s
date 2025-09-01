@@ -6,7 +6,7 @@
 
   outputs = inputs:
     let
-      mkNixosSystem = (import ../util.nix { inherit inputs; }).mkNixosSystem;
+      mkNixosSystem = (import ../../util.nix { inherit inputs; }).mkNixosSystem;
     in
     {
       nixosConfigurations.master = mkNixosSystem {
