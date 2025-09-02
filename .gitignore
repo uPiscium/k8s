@@ -2,3 +2,5 @@ out/
 .direnv
 secret.zsh
 hosts.csv
+.terraform/
+
